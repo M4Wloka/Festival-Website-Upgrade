@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box; 
+    font-size:100%;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    color: rgb(231, 127, 8);
+    text-align: center;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%); 
+}
+
+.demo-frame header {
+  display: none;
+}
+
+.demo-wrapper {
+  min-height: 300px;
+}
+
+.parallax [class*=bg__] {
+    position: relative;
+    height: 100px;
+    text-indent: -9999px;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+}
+
+.parallax [class*=bg__]:nth-child(2n) {
+    box-shadow: inset 0 0 1em #111;
+}
+
+.parallax .bg__foo {
+  background-image: url(../pictures/parallax-background.jpg);
+  filter: grayscale(100%);
+  height: 250vh;
+}
+
+.parallax .bg__bar {
+  background-image: url(../pictures/parallax-background.jpg);
+  filter: grayscale(80%);
+  height: 300vh;
+}
+
+.parallax .bg__baz {
+  background-image: url(../pictures/parallax-background.jpg);
+  filter: grayscale(60%);
+  height: 300vh;
+}
+
+.parallax .bg__bazz {
+    background-image: url(../pictures/parallax-background.jpg);
+    filter: grayscale(40%);
+    height: 200vh;
+}
+
+.parallax .bg__break {
+  background-image: url(../pictures/parallax-background.jpg);
+  filter: grayscale(0%);
+  height: 80vh;
+}
+
+.headers-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 1em; 
+    align-items: flex-start;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin: -100em 0 0 0;
+    width: 95%;
+    padding: 5%;
+    text-align: center;
+    color: #333;
+    background-color: rgba(231, 127, 8, 0.815);
+    height: 90vh;
+    background-attachment: fixed;
+}
+
+.header2 {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin: -150em 0 0 0;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    color: #333;
+    background-color:  rgba(165, 108, 44, 0.747); 
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.header3 {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin: -180em 0 0 0;
+    width: 95%;
+    padding: 5%;
+    text-align: center;
+    color: #333;
+    background-color:  rgba(117, 92, 62, 0.747); 
+    height: 130vh;
+    background-attachment: fixed;
+}
+
+.header4 {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin: -80em 0 0 0;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background-color:  rgba(75, 67, 57, 0.747); 
+    height: 70vh;
+    background-attachment: fixed;
+}
+
+#frame {    
+    position: relative;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 5px;
+    width: 100%;
+    z-index: 2;
+    background: rgba(82, 73, 63, 0.356);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    color: orange;
+    font-size: 32px;
+    font-family: 'Arial', sans-serif;
+	margin-left: 36%;
+    text-shadow: 0 0 7px rgba(255, 165, 0, 0.7),
+    0 0 10px rgba(255, 165, 0, 0.7),
+    0 0 21px rgba(255, 165, 0, 0.7),
+    0 0 42px rgba(255, 165, 0, 0.7),
+    0 0 82px rgba(255, 165, 0, 0.7),
+    0 0 92px rgba(255, 165, 0, 0.7),
+    0 0 102px rgba(255, 165, 0, 0.7),
+    0 0 151px rgba(255, 165, 0, 0.7);
+}
+
+.menu {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: orange;
+    transition: width 0.3s ease, left 0.3s ease;
+    border-radius: 2px;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.horizon {
+    color: orange;
+    font-size: 3em;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.3em;
+   text-shadow: 0 0 7px rgba(255, 165, 0, 0.7),
+    0 0 10px rgba(255, 165, 0, 0.7),
+    0 0 21px rgba(255, 165, 0, 0.7),
+    0 0 42px rgba(255, 165, 0, 0.7),
+    0 0 82px rgba(255, 165, 0, 0.7),
+    0 0 92px rgba(255, 165, 0, 0.7),
+    0 0 102px rgba(255, 165, 0, 0.7),
+    0 0 151px rgba(255, 165, 0, 0.7);
+}
+
+.festival {
+    font-size: 2em;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    color:orange;
+    text-shadow: 0 0 7px rgba(255, 165, 0, 0.7),
+    0 0 10px rgba(255, 165, 0, 0.7),
+    0 0 21px rgba(255, 165, 0, 0.7),
+    0 0 42px rgba(255, 165, 0, 0.7),
+    0 0 82px rgba(255, 165, 0, 0.7),
+    0 0 92px rgba(255, 165, 0, 0.7),
+    0 0 102px rgba(255, 165, 0, 0.7),
+    0 0 151px rgba(255, 165, 0, 0.7); 
+    
+}
+
+.par{
+    font-size: 1.5em;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: orange;
+    text-shadow: 0 0 7px rgba(255, 165, 0, 0.7),
+    0 0 10px rgba(255, 165, 0, 0.7),
+    0 0 21px rgba(255, 165, 0, 0.7),
+    0 0 42px rgba(255, 165, 0, 0.7),
+    0 0 82px rgba(255, 165, 0, 0.7),
+    0 0 92px rgba(255, 165, 0, 0.7),
+    0 0 102px rgba(255, 165, 0, 0.7),
+    0 0 151px rgba(255, 165, 0, 0.7);
+}
+
+.cn {
+    margin-top: 20px;
+    display: inline-block; /* Ensure the anchor acts like a button */
+}
+
+.schedule {
+    text-align: left;
+    padding: 120px 20px 50px;
+    color: black;
+}
+
+.stage {
+    width: 90%;
+    position: relative;
+    border-radius: 10px; 
+}
+.stage h3 {
+    font-size: 3em;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #111111af;
+    text-transform: uppercase;
+}
+
+.stage p {
+    font-family: "Oswald", sans-serif;
+    font-size: 1em;
+    color: orange;
+}
+
+.header h2, .header2 h2, .header3 h2, .header4 h2{
+    font-size: 5em;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4em;
+    color: #111111af;
+    text-transform: uppercase;
+}
+
+.lineup-grid {
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-basis: 80px;
+}
+
+.artist-card {
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 200px;
+    max-height: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin: 10px;
+}
+
+.artist-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid orange;
+}
+
+.artist-card p {
+    margin: 10px 0;
+}
+
+.artist-card::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.artist-card.top::before {
+    bottom: 60%;
+}
+
+.artist-card.bottom::before {
+    top: 80%;
+}
+
+.artist-card .hours {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.artist-card:hover .hours {
+    display: block;
+}
+
+.offset-section {
+    padding-top: 70px;
+}
+
+@media (min-width: 1400px) {
+    .artist-card {
+        transform: scale(1.10);
+    }
+}
+
+/* FAQ Section */
+.faq-section { 
+    position:relative;
+    display:flex;
+    justify-content: flex-end;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 60px 30px;
+    color: #333;
+ }
+
+.faq-section h2 {
+    font-size: 6em;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(165, 108, 44, 0.747);
+
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.faq-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.faq-search input {
+    width: 60%;
+    padding: 10px;
+    border: 3px solid orange;
+    border-radius: 4px 0 0 4px;
+}
+
+.faq-search .search-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: orange;
+    color: rgb(240, 240, 240);
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: 1.5em;
+}
+
+.faq-categories {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.faq-btn.active {
+    border-bottom: 2px solid orange;
+    color: orange;
+}
+
+.support-section {
+    text-align: center;
+    background-color: #8a8383e3;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.support-section h3 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    font-family: "Oswald", sans-serif;
+}
+
+.support-section p {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-family: "Oswald", sans-serif;
+}
+
+.contact-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.faq-questions h3 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    font-family: "Oswald", sans-serif;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    font-family: "Oswald", sans-serif;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid orange;
+}
+
+.faq-answer {
+    font-family: "Oswald", sans-serif;
+    padding: 10px 0;
+    font-size: 1.8em;
+    color: #111;
+    display: none;
+}
+
+.faq-answer a {
+    color: orange;
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides img{
+    width: 100%;
+    height: 800px;
+
+}
+/* Hide the images by default */
+.mySlides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 350px
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+.prev{
+    left:0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  font-family: "Oswald", sans-serif;
+  color: orange;
+  font-size: 2em;
+  padding: 8px 12px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 0 7px rgba(255, 165, 0, 0.7),
+  0 0 42px rgba(255, 165, 0, 0.7),
+  0 0 92px rgba(255, 165, 0, 0.7),
+  0 0 151px rgba(255, 165, 0, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.2 em;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@media (max-width: 600px) {
+    .mySlides img {
+      width: 30%;
+      height: 40%;
+    }
+  }
+  
+@media (max-width: 1200px) {
+    .mySlides img {
+      width: 50%;
+      height: 600px;
+    }
+}
+
+/* Contact Form Styles */
+.contact-section {
+    padding: 60px 30px;
+    color: #333;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid orange;
+    border-radius: 4px;
+}
+
+button {
+    padding: 15px 20px;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 2px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+footer {
+    background-color: rgba(49, 46, 43, 0.747);
+    color: darkorange;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: darkorange;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: rgba(8, 8, 7, 0.89);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    background-color: darkorange;
+    color: rgba(82, 73, 63, 0.747);
+    padding: 10px 0;
+    font-size: 12px;
+}
